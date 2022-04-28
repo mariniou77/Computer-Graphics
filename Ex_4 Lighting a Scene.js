@@ -4,10 +4,13 @@ function setup() {
 
 function draw() {
   background(110);
+  // set a kind of blue ambient light at meshes
   ambientLight(10,80,90);
-  pointLight(255,0,0,500,100,200)
+  // set a red point light coming from the right
+  pointLight(255,0,0,500,100,200);
   let dirX = (mouseX / width - 0.5) * 2;
   let dirY = (mouseY / height - 0.5) * 2;
+  // set a yellow directional light that goes along with the mouse movement
   directionalLight(250, 250, 25, -dirX, -dirY, -1);
   push();
   diamond();
